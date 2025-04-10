@@ -116,6 +116,7 @@ fabric.properties
 ### Java ###
 # Compiled class file
 *.class
+target/
 
 # Log file
 *.log
@@ -141,6 +142,7 @@ replay_pid*
 
 ### VisualStudioCode ###
 .vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
