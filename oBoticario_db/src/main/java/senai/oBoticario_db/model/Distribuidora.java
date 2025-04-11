@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.ibatis.type.NStringTypeHandler;
 
 @Entity
 @Table(name = "Distribuidora")
@@ -19,10 +18,10 @@ public class Distribuidora {
     private long id;
 
     @Column(name = "Nome_Distr", length = 100, nullable = false)
-    private String distr;
+    private String nome;
 
     @Column(name = "Telefone_Distr", length = 13, nullable = false)
-    private Integer telefone;
+    private String telefone;
 
     @Column(name = "CNPJ_Distr", length = 14, nullable = false)
     private Integer cnpj;
