@@ -21,7 +21,7 @@ public class Distribuidora {
     private String nome;
 
     @Column(name = "Telefone_Distr", length = 13, nullable = false)
-    private Integer telefone;
+    private String telefone;
 
     @Column(name = "CNPJ_Distr", length = 14, nullable = false)
     private Integer cnpj;
