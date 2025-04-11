@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/enderecos")
+@RequestMapping("/distribuidora")
 public class DistribuidoraController {
 
         @Autowired
