@@ -15,7 +15,7 @@ public class Ferias {
     @Column(name = "FeriasID")
     private long id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "FuncionarioID", referencedColumnName = "FuncionarioID", nullable = false)
     private Funcionario funcionarioID;
 
