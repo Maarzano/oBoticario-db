@@ -23,7 +23,7 @@ public class FuncionarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Funcionario> buscarPorId(@PathVariable Integer id) {
+    public ResponseEntity<Funcionario> buscarPorId(@PathVariable long id) {
         Optional<Funcionario> funcionario = funcionarioService.buscarPorId(id);
         return funcionario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
@@ -34,7 +34,7 @@ public class FuncionarioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Funcionario> atualizar(@PathVariable Integer id, @RequestBody Funcionario funcionario) {
+    public ResponseEntity<Funcionario> atualizar(@PathVariable long id, @RequestBody Funcionario funcionario) {
         try {
             Funcionario atualizado = funcionarioService.atualizar(id, funcionario);
             return ResponseEntity.ok(atualizado);
@@ -44,7 +44,7 @@ public class FuncionarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
+    public ResponseEntity<Void> deletar(@PathVariable long id) {
         funcionarioService.deletar(id);
         return ResponseEntity.noContent().build();
     }
