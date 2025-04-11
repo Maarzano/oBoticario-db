@@ -3,6 +3,8 @@ package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -40,7 +42,7 @@ public class Funcionario {
     private String cargo;
 
     @Column(name = "Salario_Func", nullable = false)
-    private Double salario;
+    private BigDecimal salario;
 
     @Column(name = "Data_Admissao_Func", nullable = false)
     private LocalDateTime dataAdmissao;
