@@ -5,13 +5,13 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
 
-@Getter
-@Setter
+
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Entity
 @Table(name = "Produtos_Loja")
+@Getter
+@Setter
 public class ProdutosLoja {
 
     @Id
@@ -25,7 +25,7 @@ public class ProdutosLoja {
 
     @ManyToOne
     @JoinColumn(name = "LojaID", nullable = false)
-    private Loja loja;
+    private Lojas loja;
 
     @Column(name = "Nome_Produto", length = 100, nullable = false)
     private String nome;
@@ -42,7 +42,7 @@ public class ProdutosLoja {
 
     @ManyToOne
     @JoinColumn(name = "CategoriaID", nullable = false)
-    private CategoriaProduto categoria;
+    private CategoriasProduto categoria;
     
     @Column(name = "Quantidade_Vendidos_Loja", nullable = false)
     private Integer quantidadeVendidosLoja;

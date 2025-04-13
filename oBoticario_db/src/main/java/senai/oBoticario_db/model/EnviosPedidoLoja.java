@@ -19,14 +19,12 @@ public class EnviosPedidoLoja {
 
     @ManyToOne
     @JoinColumn(name = "DistribuidoraID", referencedColumnName = "DistribuidoraID", nullable = false)
-    private BigDecimal distribuidora;
+    private BigDecimal distribuidora;  //deveria ser uma FK para distribuidora
 
-    @ManyToOne
-    @JoinColumn(name = "NumeroRemessa", referencedColumnName = "NumeroRemessa", nullable = false)
+    @Column(name = "NumeroRemessa", nullable = false)
     private BigDecimal numeroRemessa;
 
-    @ManyToOne
-    @JoinColumn(name = "DataEnvioRemessa", referencedColumnName = "DataEnvioRemessa", nullable = false)
+    @Column(name = "DataEnvioRemessa", nullable = false)
     private LocalDateTime dataEnvioRemessa;
 
     @Column(name = "RotasLojas", nullable = false)

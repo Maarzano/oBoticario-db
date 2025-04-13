@@ -27,12 +27,12 @@ public class EnviosPedidoLojaService {
         return enviosPedidoLojaRepository.save(EnviosPedidoLojas);
     }
 
-    public EnviosPedidoLoja atualizar(long id, EnviosPedidoLoja EnviosPedidoLojaAtualizada) {
+    public EnviosPedidoLoja atualizar(long id, EnviosPedidoLoja enviosPedidoLojaAtualizada) {
         return enviosPedidoLojaRepository.findById(id).map(EnviosPedidoLojas -> {
-            EnviosPedidoLojas.setDistribuidora(EnviosPedidoLojaAtualizada.getDistribuidora());
-            EnviosPedidoLojas.setNumeroRemessa(EnviosPedidoLojaAtualizada.getNumeroRemessa());
-            EnviosPedidoLojas.setDataEnvioRemessa(EnviosPedidoLojaAtualizada.getDataEnvioRemessa());
-            EnviosPedidoLojas.setRotasLojas(EnviosPedidoLojaAtualizada.getRotasLojas());
+            EnviosPedidoLojas.setDistribuidora(enviosPedidoLojaAtualizada.getDistribuidora());
+            EnviosPedidoLojas.setNumeroRemessa(enviosPedidoLojaAtualizada.getNumeroRemessa());
+            EnviosPedidoLojas.setDataEnvioRemessa(enviosPedidoLojaAtualizada.getDataEnvioRemessa());
+            EnviosPedidoLojas.setRotasLojas(enviosPedidoLojaAtualizada.getRotasLojas());
             return enviosPedidoLojaRepository.save(EnviosPedidoLojas);
         }).orElseThrow(() -> new RuntimeException("venda não encontrado!"));
     }

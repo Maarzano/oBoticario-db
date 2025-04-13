@@ -22,7 +22,7 @@ public class Pedidos_Revendedor {
     private BigDecimal revendedor;
 
     @Column(name = "ProdutoID", nullable = false)
-    private BigDecimal produto;
+    private BigDecimal produto;  //isso aqui deveria ser um FK para Produtos_distribuidora
 
     @Column(name = "Data_Pedido_Rev", nullable = false)
     private LocalDateTime data_pedido_rev;
@@ -36,21 +36,3 @@ public class Pedidos_Revendedor {
     @Column(name = "Status_Pedido", nullable = false)
     private String status_pedido;
 }
-
-/*CREATE TABLE Pedidos_Revendedor (
-
-PedidoRevendedorID INT AUTO_INCREMENT PRIMARY KEY,
-
-RevendedorID INT,
-
-ProdutoID INT,
-
-Data_Pedido_Rev DATETIME,
-
-Valor_Pedido_Rev DECIMAL(10, 2) CHECK (Valor_Pedido_Rev > 0),
-
-Status_Pedido ENUM('Enviado', 'Pendente', 'Entregue'),
-
-FOREIGN KEY (RevendedorID) REFERENCES Revendedores(RevendedorID),
-
-FOREIGN KEY (ProdutoID) REFERENCES Produtos_Distribuidora(ProdutoID) */
