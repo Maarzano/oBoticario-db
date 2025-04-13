@@ -2,10 +2,8 @@ package senai.oBoticario_db.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import senai.oBoticario_db.model.Lojas;
+import senai.oBoticario_db.model.ProdutosLoja;
 
 @Repository
-public interface LojasRepository extends JpaRepository<Lojas, Long>{
-
+public interface ProdutosLojaRepository extends JpaRepository<ProdutosLoja, Long> {
 }
