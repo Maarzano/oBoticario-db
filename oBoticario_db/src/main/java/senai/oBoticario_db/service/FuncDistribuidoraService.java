@@ -3,7 +3,7 @@ package senai.oBoticario_db.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import senai.oBoticario_db.repository.FuncDistribuidoraRepository;
+import senai.oBoticario_db.Repository.FuncDistribuidoraRepository;
 import senai.oBoticario_db.model.FuncDistribuidora;
 
 import java.util.List;

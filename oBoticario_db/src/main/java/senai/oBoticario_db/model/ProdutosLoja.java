@@ -20,7 +20,7 @@ public class ProdutosLoja {
 
     @ManyToOne
     @JoinColumn(name = "ProdutoID_Distr", referencedColumnName = "ProdutoID_Distr", nullable = false)
-    private ProdutoDistribuidora produtoDistribuidora;
+    private ProdDistribuidora produtoDistribuidora;
 
     @ManyToOne
     @JoinColumn(name = "LojaID", referencedColumnName = "LojaID", nullable = false)

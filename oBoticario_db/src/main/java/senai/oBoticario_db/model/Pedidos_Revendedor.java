@@ -19,20 +19,18 @@ public class Pedidos_Revendedor {
 
     @ManyToOne
     @JoinColumn(name = "RevendedorID", referencedColumnName = "RevendedorID", nullable  = false)
-    private BigDecimal revendedor;
+    private Revendedores revendedor;
 
-    @Column(name = "ProdutoID", nullable = false)
-    private BigDecimal produto;  //isso aqui deveria ser um FK para Produtos_distribuidora
+    @ManyToOne
+    @JoinColumn(name = "ProdutoID", referencedColumnName = "ProdutoID",  nullable = false)
+    private ProdDistribuidora produto;
 
     @Column(name = "Data_Pedido_Rev", nullable = false)
     private LocalDateTime data_pedido_rev;
 
     @Column(name = "Valor_Pedido_Rev", nullable = false)
     private  BigDecimal valor_pedido_rev;
-
-    @Column(name = "Data_Nascimento_Rev", nullable = false)
-    private LocalDateTime data_nascimento;
-
+    
     @Column(name = "Status_Pedido", nullable = false)
     private String status_pedido;
 }
