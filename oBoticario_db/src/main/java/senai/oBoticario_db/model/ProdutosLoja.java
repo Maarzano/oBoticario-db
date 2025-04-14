@@ -7,30 +7,29 @@ import lombok.*;
 
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "Produtos_Loja")
-@Getter
-@Setter
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
+
 public class ProdutosLoja {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ProdutoID_Loja")
-    private Long id;
+    private long id;
 
     @ManyToOne
-    @JoinColumn(name = "ProdutoID_Distr", nullable = false)
+    @JoinColumn(name = "ProdutoID_Distr", referencedColumnName = "ProdutoID_Distr", nullable = false)
     private ProdutoDistribuidora produtoDistribuidora;
 
     @ManyToOne
-    @JoinColumn(name = "LojaID", nullable = false)
+    @JoinColumn(name = "LojaID", referencedColumnName = "LojaID", nullable = false)
     private Lojas lojaID;
 
     @Column(name = "Nome_Produto", length = 100, nullable = false)
     private String nome;
 
-    @Column(name = "Descricao", length = 200, nullable = false)
+    @Column(name = "Descricao", length = 200, nullable = true)
     private String descricao;
 
     @Column(name = "Preco_Produto", precision = 10, scale = 2, nullable = false)
@@ -41,7 +40,7 @@ public class ProdutosLoja {
     private Integer quantidadeProdutoLoja;
 
     @ManyToOne
-    @JoinColumn(name = "CategoriaID", nullable = false)
+    @JoinColumn(name = "CategoriaID", referencedColumnName = "CategoriaID", nullable = false)
     private CategoriasProduto categoria;
     
     @Column(name = "Quantidade_Vendidos_Loja", nullable = false)

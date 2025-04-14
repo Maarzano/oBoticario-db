@@ -4,9 +4,6 @@ package senai.oBoticario_db.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "Itens_Venda")
 @Getter @Setter
