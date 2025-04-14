@@ -2,8 +2,9 @@ package senai.oBoticario_db.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import senai.oBoticario_db.Repository.ProdutosLojaRepository;
 import senai.oBoticario_db.model.ProdutosLoja;
-import senai.oBoticario_db.repository.ProdutosLojaRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -28,14 +29,14 @@ public class ProdutosLojaService {
 
     public ProdutosLoja atualizar(long id, ProdutosLoja produtoAtualizado) {
         return produtosLojaRepository.findById(id).map(produto -> {
-            produto.setProdutoID_Distr(produtoAtualizado.getProdutoID_Distr());
+            produto.setProdutoDistribuidora(produtoAtualizado.getProdutoDistribuidora());
             produto.setLojaID(produtoAtualizado.getLojaID());
             produto.setNome(produtoAtualizado.getNome());
             produto.setDescricao(produtoAtualizado.getDescricao());
             produto.setPrecoProduto(produtoAtualizado.getPrecoProduto());
-            produto.setQuantidade_Produto_Loja(produtoAtualizado.getQuantidade_Produto_Loja());
-            produto.setCategoriaID(produtoAtualizado.getCategoriaID());
-            produto.setQuantidade_Vendidos_Loja(produtoAtualizado.getQuantidade_Vendidos_Loja());
+            produto.setQuantidadeProdutoLoja(produtoAtualizado.getQuantidadeProdutoLoja());
+            produto.setCategoria(produtoAtualizado.getCategoria());
+            produto.setQuantidadeVendidosLoja(produtoAtualizado.getQuantidadeVendidosLoja());
             return produtosLojaRepository.save(produto);
         }).orElseThrow(() -> new RuntimeException("Produto na loja não encontrado!"));
     }

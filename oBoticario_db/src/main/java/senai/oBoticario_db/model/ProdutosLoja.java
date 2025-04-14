@@ -25,7 +25,7 @@ public class ProdutosLoja {
 
     @ManyToOne
     @JoinColumn(name = "LojaID", nullable = false)
-    private Lojas loja;
+    private Lojas lojaID;
 
     @Column(name = "Nome_Produto", length = 100, nullable = false)
     private String nome;

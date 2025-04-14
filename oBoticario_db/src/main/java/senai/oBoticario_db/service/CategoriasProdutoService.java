@@ -2,8 +2,9 @@ package senai.oBoticario_db.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import senai.oBoticario_db.Repository.CategoriasProdutoRepository;
 import senai.oBoticario_db.model.CategoriasProduto;
-import senai.oBoticario_db.repository.CategoriasProdutoRepository;
 
 import java.util.List;
 import java.util.Optional;
