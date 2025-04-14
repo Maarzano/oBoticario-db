@@ -15,7 +15,8 @@ public class ProdDistribuidora {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "DistribuidoraID", referencedColumnName = "DistribuidoraID", nullable = false)
+    @JoinColumn(name = "Distribuidora_ID", referencedColumnName = "Distribuidora_ID", nullable = false)
+
     private Distribuidora distribuidora;
 
     @Column(name = "Quantidade_Produtos_Distr", nullable = false)

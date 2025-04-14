@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/produtos_Distribuidora")
 public class ProdDistribuidoraController {
 
     @Autowired

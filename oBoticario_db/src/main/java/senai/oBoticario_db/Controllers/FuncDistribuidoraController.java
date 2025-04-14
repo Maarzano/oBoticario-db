@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/funcionarios")
+@RequestMapping("/funcionarios_Distribuidora")
 public class FuncDistribuidoraController {
 
     @Autowired
