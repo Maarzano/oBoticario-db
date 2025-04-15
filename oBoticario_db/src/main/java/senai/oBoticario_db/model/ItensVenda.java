@@ -2,6 +2,7 @@ package senai.oBoticario_db.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -29,6 +30,7 @@ public class ItensVenda {
     private long Quantidade;
 
     @Column(name = "Preco_Unitario")
+    @DecimalMin(value = "0.01", message = "O preço unitário deve ser maior que zero")
     private BigDecimal Preco_Unitario;
 
 

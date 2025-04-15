@@ -1,6 +1,7 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -18,7 +19,7 @@ public class FuncDistribuidora {
 
     @ManyToOne
     @JoinColumn(name = "Distribuidora_ID", referencedColumnName = "Distribuidora_ID", nullable = false)
-    private Distribuidora distribuidora;  // FK para a tabela Distribuidoras
+    private Distribuidora distribuidora;
 
     @Column(name = "Nome_Func", nullable = false)
     private String nome;
@@ -33,5 +34,6 @@ public class FuncDistribuidora {
     private String telefone;
 
     @Column(name = "Data_Nascimento_Func", nullable = false)
+    @Past(message = "A data de nascimento tem que ser no passado")
     private LocalDate dataNascimento;
 }
