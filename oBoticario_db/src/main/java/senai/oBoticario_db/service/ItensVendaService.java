@@ -30,7 +30,7 @@ public class ItensVendaService {
     public ItensVenda atualizar(long id, ItensVenda itemVendaAtualizado) {
         return itemVendaRepository.findById(id).map(item -> {
             item.setVendaID(itemVendaAtualizado.getVendaID());
-            item.setLojaID(itemVendaAtualizado.getLojaID());
+            item.setProdutosLoja(itemVendaAtualizado.getProdutosLoja());
             item.setQuantidade(itemVendaAtualizado.getQuantidade());
             item.setPreco_Unitario(itemVendaAtualizado.getPreco_Unitario());
             return itemVendaRepository.save(item);

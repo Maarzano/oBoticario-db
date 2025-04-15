@@ -23,7 +23,7 @@ public class ItensVenda {
 
     @ManyToOne
     @JoinColumn(name = "ProdutoID_Loja", referencedColumnName = "ProdutoID_Loja", nullable = false)
-    private Lojas lojaID;
+    private ProdutosLoja produtosLoja;
 
     @Column(name = "Quantidade")
     private long Quantidade;
