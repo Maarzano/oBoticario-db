@@ -1,9 +1,9 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,13 +18,14 @@ public class EnviosPedidoLoja {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "DistribuidoraID", referencedColumnName = "DistribuidoraID", nullable = false)
-    private BigDecimal distribuidora;  //deveria ser uma FK para distribuidora
+    @JoinColumn(name = "DistribuidoraID", referencedColumnName = "Distribuidora_ID", nullable = false)
+    private Distribuidora distribuidoraId;
 
     @Column(name = "NumeroRemessa", nullable = false)
-    private BigDecimal numeroRemessa;
+    private int numeroRemessa;
 
     @Column(name = "DataEnvioRemessa", nullable = false)
+    @Past(message = "A data de envio deve ser no passado") //será?
     private LocalDateTime dataEnvioRemessa;
 
     @Column(name = "RotasLojas", nullable = false)

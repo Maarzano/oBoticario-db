@@ -29,12 +29,12 @@ public class EnviosPedidoLojaService {
 
     public EnviosPedidoLoja atualizar(long id, EnviosPedidoLoja enviosPedidoLojaAtualizada) {
         return enviosPedidoLojaRepository.findById(id).map(EnviosPedidoLojas -> {
-            EnviosPedidoLojas.setDistribuidora(enviosPedidoLojaAtualizada.getDistribuidora());
+            EnviosPedidoLojas.setDistribuidoraId(enviosPedidoLojaAtualizada.getDistribuidoraId());
             EnviosPedidoLojas.setNumeroRemessa(enviosPedidoLojaAtualizada.getNumeroRemessa());
             EnviosPedidoLojas.setDataEnvioRemessa(enviosPedidoLojaAtualizada.getDataEnvioRemessa());
             EnviosPedidoLojas.setRotasLojas(enviosPedidoLojaAtualizada.getRotasLojas());
             return enviosPedidoLojaRepository.save(EnviosPedidoLojas);
-        }).orElseThrow(() -> new RuntimeException("venda não encontrado!"));
+        }).orElseThrow(() -> new RuntimeException("Envio não encontrado!"));
     }
 
     public void deletar(long id) {
