@@ -3,7 +3,6 @@ package senai.oBoticario_db.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -17,17 +16,20 @@ public class Revendedores {
     @Column(name = "RevendedorID")
     private long id;
 
-    @ManyToOne
-    @JoinColumn(name = "Nome_Rev", referencedColumnName = "Nome_Rev", nullable  = false)
-    private String revendedores;
+    @Column(name = "Nome_Rev", nullable  = false)
+    private String nome;
+
+    @Column(name = "Email_Rev",nullable  = false, unique = true)
+    private String email;
 
     @Column(name = "Senha_Rev", nullable = false)
-    private BigDecimal senha;
+    private String senha;
 
-    @Column(name = "Telefone_Rev", nullable = false)
-    private BigDecimal telefone;
+    @Column(name = "Telefone_Rev",length = 13, nullable = false, unique = true)
+    private String telefone;
 
-    @Column(name = "Endereco_ID", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "Endereco_ID", referencedColumnName = "Endereco_ID", nullable = false)
     private Endereco endereco;
 
     @Column(name = "Data_Nascimento_Rev", nullable = false)

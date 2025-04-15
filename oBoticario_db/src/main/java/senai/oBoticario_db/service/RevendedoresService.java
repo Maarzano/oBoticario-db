@@ -23,13 +23,14 @@ public class RevendedoresService {
         return revendedoresRepository.findById(id);
     }
 
-    public Revendedores salvar(Revendedores revendedores) {
-        return revendedoresRepository.save(revendedores);
+    public Revendedores salvar(Revendedores revendedore) {
+        return revendedoresRepository.save(revendedore);
     }
 
     public Revendedores atualizar(long id, Revendedores revendedoresAtualizados) {
         return revendedoresRepository.findById(id).map(revendedore -> {
-            revendedore.setRevendedores(revendedoresAtualizados.getRevendedores());
+            revendedore.setNome(revendedoresAtualizados.getNome());
+            revendedore.setEmail(revendedoresAtualizados.getEmail());
             revendedore.setSenha(revendedoresAtualizados.getSenha());
             revendedore.setTelefone(revendedoresAtualizados.getTelefone());
             revendedore.setEndereco(revendedoresAtualizados.getEndereco());
