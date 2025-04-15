@@ -33,7 +33,6 @@ public class Pedidos_RevendedorService {
             Pedidos_Revendedo.setProduto(pedidos_RevendedorAtualizado.getProduto());
             Pedidos_Revendedo.setData_pedido_rev(pedidos_RevendedorAtualizado.getData_pedido_rev());
             Pedidos_Revendedo.setValor_pedido_rev(pedidos_RevendedorAtualizado.getValor_pedido_rev());
-            Pedidos_Revendedo.setData_nascimento(pedidos_RevendedorAtualizado.getData_nascimento());
             Pedidos_Revendedo.setStatus_pedido(pedidos_RevendedorAtualizado.getStatus_pedido());
             return pedidos_RevendedorRepository.save(Pedidos_Revendedo);
         }).orElseThrow(() -> new RuntimeException("Pedido do Revendedor não encontrado!"));
