@@ -29,7 +29,7 @@ public class ProdDistribuidoraService {
 
     public ProdDistribuidora atualizar(long id, ProdDistribuidora prodDistribuidoraAtualizado) {
         return prodDistribuidoraRepository.findById(id).map(prod -> {
-            prod.setDistribuidora(prodDistribuidoraAtualizado.getDistribuidora()); // Atualiza a distribuidora se necessário
+            prod.setDistribuidora(prodDistribuidoraAtualizado.getDistribuidora());
             prod.setQuantidadeProdutos(prodDistribuidoraAtualizado.getQuantidadeProdutos());
             return prodDistribuidoraRepository.save(prod);
         }).orElseThrow(() -> new RuntimeException("Produto não encontrado!"));

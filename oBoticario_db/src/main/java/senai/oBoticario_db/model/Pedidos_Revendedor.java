@@ -22,7 +22,7 @@ public class Pedidos_Revendedor {
     private Revendedores revendedor;
 
     @ManyToOne
-    @JoinColumn(name = "ProdutoID", referencedColumnName = "ProdutoID",  nullable = false)
+    @JoinColumn(name = "ProdutoID", referencedColumnName = "ProdutoID_Distr",  nullable = false)
     private ProdDistribuidora produto;
 
     @Column(name = "Data_Pedido_Rev", nullable = false)

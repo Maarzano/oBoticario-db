@@ -17,7 +17,7 @@ public class FuncDistribuidora {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "DistribuidoraID", referencedColumnName = "DistribuidoraID", nullable = false)
+    @JoinColumn(name = "Distribuidora_ID", referencedColumnName = "Distribuidora_ID", nullable = false)
     private Distribuidora distribuidora;  // FK para a tabela Distribuidoras
 
     @Column(name = "Nome_Func", nullable = false)
