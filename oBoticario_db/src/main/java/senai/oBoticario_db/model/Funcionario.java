@@ -27,10 +27,10 @@ public class Funcionario {
     @Column(name = "Email_Func", length = 320, nullable = false, unique = true)
     private String email;
 
-    @Column(name = "CPF_Func", length = 11, nullable = false, unique = true)
+    @Column(name = "CPF_Func", columnDefinition = "CHAR(11)", nullable = false, unique = true)
     private String cpf;
 
-    @Column(name = "Telefone_Func", length = 13, unique = true)
+    @Column(name = "Telefone_Func", columnDefinition = "CHAR(13)", unique = true)
     private String telefone;
 
     @Column(name = "Data_Nasc_Func", nullable = false)

@@ -26,7 +26,7 @@ public class Endereco {
     @Column(name = "Endereco_Cidade", length = 40, nullable = false)
     private String cidade;
 
-    @Column(name = "Endereco_UF", length = 2, nullable = false)
+    @Column(name = "Endereco_UF", columnDefinition = "CHAR(2)", nullable = false)
     private String uf;
 
     @Column(name = "Endereco_CEP", length = 10, nullable = false)
