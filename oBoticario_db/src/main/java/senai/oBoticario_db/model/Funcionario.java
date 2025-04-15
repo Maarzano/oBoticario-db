@@ -2,6 +2,8 @@ package senai.oBoticario_db.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -32,10 +34,8 @@ public class Funcionario {
     private String telefone;
 
     @Column(name = "Data_Nasc_Func", nullable = false)
-    private LocalDate dataNascimento
     @Past(message = "A data de nascimento deve ser uma data passada")
-    private LocalDate dataNascFunc;
-}
+    private LocalDate dataNascimento;
 
     @ManyToOne
     @JoinColumn(name = "Endereco_ID", referencedColumnName = "Endereco_ID", nullable = false)
@@ -45,9 +45,11 @@ public class Funcionario {
     private String cargo;
 
     @Column(name = "Salario_Func", nullable = false)
+    @DecimalMin(value = "0.01", message = "O salário deve ser maior que zero")
     private BigDecimal salario;
 
     @Column(name = "Data_Admissao_Func", nullable = false)
+    @Past(message = "A data de adimissão deve ser no passado")
     private LocalDateTime dataAdmissao;
 
 }

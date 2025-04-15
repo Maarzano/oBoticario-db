@@ -1,6 +1,7 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -29,6 +30,7 @@ public class Pedidos_Revendedor {
     private LocalDateTime data_pedido_rev
     
     @Column(name = "Valor_Pedido_Rev", nullable = false)
+    @DecimalMin(value = "0.01", message = "O valor do pedido deve ser maior que zero")
     private  BigDecimal valor_pedido_rev;
     @DecimalMin(value = "0.01", message = "O valor do pedido deve ser maior que zero")
     private BigDecimal valorPedidoRev;

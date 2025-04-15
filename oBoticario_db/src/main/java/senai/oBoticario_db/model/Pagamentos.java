@@ -1,6 +1,8 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -22,15 +24,14 @@ public class Pagamentos {
     private Funcionario funcionario;
 
     @Column(name = "Pagamento_Valor_Bruto", nullable = false)
-    private BigDecimal pagamento_Bruto
     @DecimalMin(value = "0.01", message = "O pagamento deve ser maior que zero")
-    private BigDecimal pagamentoValorBruto;
+    private BigDecimal pagamento_Bruto;
 
     @Column(name = "Pagamento_Valor_Bonus", nullable = false)
-    private BigDecimal pagamento_Bonus
     @DecimalMin(value = "0.01", message = "O pagamento deve ser maior que zero")
-    private BigDecimal Pagamento_Valor_Bonus;
+    private BigDecimal pagamento_Bonus;
 
     @Column(name = "Data_Pagamento", nullable = false)
+    @Past(message = "A data de pagamento deve ser feito no passado")
     private LocalDateTime data_Pagamento;
 }

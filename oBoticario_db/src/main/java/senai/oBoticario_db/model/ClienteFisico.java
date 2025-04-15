@@ -1,6 +1,7 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -30,7 +31,6 @@ public class ClienteFisico {
     private Endereco endereco;
 
     @Column(name = "Data_Nasc_Cliente", nullable = false)
-    private LocalDate dataNascimento
     @Past(message = "A data de nascimento deve ser uma data passada")
-    private LocalDate dataNascCliente;
+    private LocalDate dataNascimento;
 }

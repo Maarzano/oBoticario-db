@@ -1,6 +1,7 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -30,6 +31,7 @@ public class Vendas {
     private ClienteFisico clienteFisico;
 
     @Column(name = "Data_Venda", nullable = false)
+    @Past(message = "A data de venda deve ser no passado")
     private LocalDateTime dataVenda;
 
     @Column(name = "Total_Valor", nullable = false)
