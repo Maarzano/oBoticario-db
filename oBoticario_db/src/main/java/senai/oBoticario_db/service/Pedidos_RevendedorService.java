@@ -15,19 +15,19 @@ public class Pedidos_RevendedorService {
     @Autowired
     private Pedidos_RevendedorRepository pedidos_RevendedorRepository;
 
-    public List<Pedidos_Revendedor> listarTodos() {
+    public List<PedidosRevendedor> listarTodos() {
         return pedidos_RevendedorRepository.findAll();
     }
 
-    public Optional<Pedidos_Revendedor> buscarPorId(long id) {
+    public Optional<PedidosRevendedor> buscarPorId(long id) {
         return pedidos_RevendedorRepository.findById(id);
     }
 
-    public Pedidos_Revendedor salvar(Pedidos_Revendedor Pedidos_Revendedo) {
+    public PedidosRevendedor salvar(PedidosRevendedor Pedidos_Revendedo) {
         return pedidos_RevendedorRepository.save(Pedidos_Revendedo);
     }
 
-    public Pedidos_Revendedor atualizar(long id, Pedidos_Revendedor pedidos_RevendedorAtualizado) {
+    public PedidosRevendedor atualizar(long id, PedidosRevendedor pedidos_RevendedorAtualizado) {
         return pedidos_RevendedorRepository.findById(id).map(Pedidos_Revendedo -> {
             Pedidos_Revendedo.setRevendedor(pedidos_RevendedorAtualizado.getRevendedor());
             Pedidos_Revendedo.setProduto(pedidos_RevendedorAtualizado.getProduto());

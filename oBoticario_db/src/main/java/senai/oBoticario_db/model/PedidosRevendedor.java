@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Table(name = "Pedidos_Revendedor")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class Pedidos_Revendedor {
+public class PedidosRevendedor {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class Pedidos_Revendedor {
     private ProdDistribuidora produto;
 
     @Column(name = "Data_Pedido_Rev", nullable = false)
-    private LocalDateTime data_pedido_rev
+    private LocalDateTime data_pedido_rev;
     
     @Column(name = "Valor_Pedido_Rev", nullable = false)
     @DecimalMin(value = "0.01", message = "O valor do pedido deve ser maior que zero")
