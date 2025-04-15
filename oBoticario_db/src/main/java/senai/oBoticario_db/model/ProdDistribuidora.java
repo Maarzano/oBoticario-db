@@ -11,7 +11,7 @@ public class ProdDistribuidora {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ProdutoID")
+    @Column(name = "ProdutoID_Distr")
     private long id;
 
     @ManyToOne
