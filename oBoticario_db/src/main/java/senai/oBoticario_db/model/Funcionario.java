@@ -32,7 +32,10 @@ public class Funcionario {
     private String telefone;
 
     @Column(name = "Data_Nasc_Func", nullable = false)
-    private LocalDate dataNascimento;
+    private LocalDate dataNascimento
+    @Past(message = "A data de nascimento deve ser uma data passada")
+    private LocalDate dataNascFunc;
+}
 
     @ManyToOne
     @JoinColumn(name = "Endereco_ID", referencedColumnName = "Endereco_ID", nullable = false)

@@ -31,5 +31,7 @@ public class Revendedores {
     private Endereco endereco;
 
     @Column(name = "Data_Nascimento_Rev", nullable = false)
-    private LocalDateTime data_nascimento;
+    private LocalDateTime data_nascimento
+    @Past(message = "A data de nascimento deve ser uma data passada")
+    private LocalDate dataNascimentoRev;
 }

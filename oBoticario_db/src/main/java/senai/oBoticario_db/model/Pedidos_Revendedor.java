@@ -26,11 +26,13 @@ public class Pedidos_Revendedor {
     private ProdDistribuidora produto;
 
     @Column(name = "Data_Pedido_Rev", nullable = false)
-    private LocalDateTime data_pedido_rev;
-
+    private LocalDateTime data_pedido_rev
+    
     @Column(name = "Valor_Pedido_Rev", nullable = false)
     private  BigDecimal valor_pedido_rev;
-    
+    @DecimalMin(value = "0.01", message = "O valor do pedido deve ser maior que zero")
+    private BigDecimal valorPedidoRev;
+
     @Column(name = "Status_Pedido", nullable = false)
     private String status_pedido;
 }

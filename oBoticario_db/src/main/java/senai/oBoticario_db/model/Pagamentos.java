@@ -22,10 +22,14 @@ public class Pagamentos {
     private Funcionario funcionario;
 
     @Column(name = "Pagamento_Valor_Bruto", nullable = false)
-    private BigDecimal pagamento_Bruto;
+    private BigDecimal pagamento_Bruto
+    @DecimalMin(value = "0.01", message = "O pagamento deve ser maior que zero")
+    private BigDecimal pagamentoValorBruto;
 
     @Column(name = "Pagamento_Valor_Bonus", nullable = false)
-    private BigDecimal pagamento_Bonus;
+    private BigDecimal pagamento_Bonus
+    @DecimalMin(value = "0.01", message = "O pagamento deve ser maior que zero")
+    private BigDecimal Pagamento_Valor_Bonus;
 
     @Column(name = "Data_Pagamento", nullable = false)
     private LocalDateTime data_Pagamento;

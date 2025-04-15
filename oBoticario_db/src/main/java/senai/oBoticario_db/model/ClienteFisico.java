@@ -30,5 +30,7 @@ public class ClienteFisico {
     private Endereco endereco;
 
     @Column(name = "Data_Nasc_Cliente", nullable = false)
-    private LocalDate dataNascimento;
+    private LocalDate dataNascimento
+    @Past(message = "A data de nascimento deve ser uma data passada")
+    private LocalDate dataNascCliente;
 }
