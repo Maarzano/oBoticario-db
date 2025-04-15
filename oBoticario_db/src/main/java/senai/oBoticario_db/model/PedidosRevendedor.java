@@ -31,8 +31,6 @@ public class PedidosRevendedor {
     
     @Column(name = "Valor_Pedido_Rev", nullable = false)
     @DecimalMin(value = "0.01", message = "O valor do pedido deve ser maior que zero")
-    private  BigDecimal valor_pedido_rev;
-    @DecimalMin(value = "0.01", message = "O valor do pedido deve ser maior que zero")
     private BigDecimal valorPedidoRev;
 
     @Column(name = "Status_Pedido", nullable = false)
