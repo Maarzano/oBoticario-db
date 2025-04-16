@@ -20,6 +20,13 @@ public class Endereco {
     @Column(name = "Endereco_Numero", nullable = false)
     private Integer numero;
 
+public void setNumero(Integer numero) {
+    if (numero < 0) {
+        throw new IllegalArgumentException("O número de um endereço deve ser positivo");
+    }
+    this.numero = numero;
+}
+    
     @Column(name = "Endereco_Bairro", length = 40, nullable = false)
     private String bairro;
 
