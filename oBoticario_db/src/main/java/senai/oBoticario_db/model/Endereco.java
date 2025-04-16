@@ -1,6 +1,7 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 import lombok.*;
 
 @Entity
@@ -18,14 +19,8 @@ public class Endereco {
     private String rua;
 
     @Column(name = "Endereco_Numero", nullable = false)
+    @Min(value = 0, message = "O número de um endereço deve ser positivo")
     private Integer numero;
-
-public void setNumero(Integer numero) {
-    if (numero < 0) {
-        throw new IllegalArgumentException("O número de um endereço deve ser positivo");
-    }
-    this.numero = numero;
-}
     
     @Column(name = "Endereco_Bairro", length = 40, nullable = false)
     private String bairro;

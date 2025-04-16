@@ -25,16 +25,16 @@ public class Ferias {
     @Column(name = "Data_Fim_Ferias", nullable = false)
     private LocalDateTime fimFerias;
 
-public void setInicioFerias(LocalDateTime inicioFerias) {
-    this.inicioFerias = inicioFerias;
-}
-
-public void setFimFerias(LocalDateTime fimFerias) {
-    if (this.inicioFerias != null && fimFerias != null && fimFerias.isBefore(this.inicioFerias)) {
-        throw new IllegalArgumentException("Data de fim de férias deve ser depois da data de início.");
+    public void setInicioFerias(LocalDateTime inicioFerias) {
+        this.inicioFerias = inicioFerias;
     }
-    this.fimFerias = fimFerias;
-}
+
+    public void setFimFerias(LocalDateTime fimFerias) {
+        if (this.inicioFerias != null && fimFerias != null && fimFerias.isBefore(this.inicioFerias)) {
+            throw new IllegalArgumentException("Data de fim de férias deve ser depois da data de início.");
+        }
+        this.fimFerias = fimFerias;
+    }
 
 
 
