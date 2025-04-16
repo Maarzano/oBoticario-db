@@ -34,6 +34,6 @@ public class FuncDistribuidora {
     private String telefone;
 
     @Column(name = "Data_Nascimento_Func", nullable = false)
-    @Past(message = "A data de nascimento tem que ser no passado")
+    @Past(message = "A data de nascimento deve ser no passado")
     private LocalDate dataNascimento;
 }

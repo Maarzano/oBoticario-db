@@ -1,6 +1,7 @@
 package senai.oBoticario_db.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Past;
 import lombok.*;
 
@@ -35,5 +36,7 @@ public class Vendas {
     private LocalDateTime dataVenda;
 
     @Column(name = "Total_Valor", nullable = false)
+    @DecimalMin(value = "0.01", message = "O valor total deve ser maior que zero")
     private BigDecimal valorTotal;
+    
 }
