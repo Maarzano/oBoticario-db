@@ -21,7 +21,7 @@ public class EnviosPedidoLoja {
     @JoinColumn(name = "DistribuidoraID", referencedColumnName = "Distribuidora_ID", nullable = false)
     private Distribuidora distribuidoraId;
 
-    @Column(name = "NumeroRemessa", nullable = false)
+    @Column(name = "NumeroRemessa", nullable = false, unique = true)
     private int numeroRemessa;
 
     @Column(name = "DataEnvioRemessa", nullable = false)
