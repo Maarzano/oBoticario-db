@@ -15,8 +15,8 @@ public class Ausencias {
     @Column(name = "AusenciaID")
     private long id;
 
-    @OneToOne
-    @JoinColumn(name = "FuncionarioID", referencedColumnName = "FuncionarioID", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "FuncionarioID", referencedColumnName = "FuncionarioID", unique = false, nullable = false)
     private Funcionario funcionarioID;
     
     @Column(name = "Data_Inicio_Ausencia", nullable = false)
