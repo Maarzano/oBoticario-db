@@ -25,7 +25,7 @@ public class EnviosPedidoLoja {
     private int numeroRemessa;
 
     @Column(name = "DataEnvioRemessa", nullable = false)
-    @Past(message = "A data de envio deve ser no passado") //será? tiraosdentes
+    @Past(message = "A data de envio deve ser no passado")
     private LocalDateTime dataEnvioRemessa;
 
     @Column(name = "RotasLojas", nullable = false)

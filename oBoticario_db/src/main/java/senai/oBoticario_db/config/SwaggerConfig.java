@@ -7,5 +7,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @OpenAPIDefinition(info = @Info(title = "API do Meu Sistema", version = "1.0", description = "Documentação da API"))
 public class SwaggerConfig {
-
+//http://localhost:8080/swagger-ui/index.html
 }
