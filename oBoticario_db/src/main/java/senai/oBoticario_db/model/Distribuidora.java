@@ -24,5 +24,5 @@ public class Distribuidora {
     private String telefone;
 
     @Column(name = "CNPJ_Distr", columnDefinition = "CHAR(14)", nullable = false, unique = true)
-    private Integer cnpj;
+    private String cnpj;
 }
