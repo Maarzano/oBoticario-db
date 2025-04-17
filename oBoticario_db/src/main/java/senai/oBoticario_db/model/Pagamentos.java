@@ -32,6 +32,6 @@ public class Pagamentos {
     private BigDecimal pagamento_Bonus;
 
     @Column(name = "Data_Pagamento", nullable = false)
-    @Past(message = "A data de pagamento deve ser feito no passado")
+    @Past(message = "A data de pagamento deve ser no passado")
     private LocalDateTime data_Pagamento;
 }

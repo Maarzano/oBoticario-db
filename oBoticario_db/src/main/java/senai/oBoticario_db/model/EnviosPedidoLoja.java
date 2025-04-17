@@ -21,11 +21,11 @@ public class EnviosPedidoLoja {
     @JoinColumn(name = "DistribuidoraID", referencedColumnName = "Distribuidora_ID", nullable = false)
     private Distribuidora distribuidoraId;
 
-    @Column(name = "NumeroRemessa", nullable = false)
+    @Column(name = "NumeroRemessa", nullable = false, unique = true)
     private int numeroRemessa;
 
     @Column(name = "DataEnvioRemessa", nullable = false)
-    @Past(message = "A data de envio deve ser no passado") //será?
+    @Past(message = "A data de envio deve ser no passado")
     private LocalDateTime dataEnvioRemessa;
 
     @Column(name = "RotasLojas", nullable = false)

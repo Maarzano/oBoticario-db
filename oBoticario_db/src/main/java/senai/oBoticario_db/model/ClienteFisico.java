@@ -23,7 +23,7 @@ public class ClienteFisico {
     @Column(name = "Email_Cliente", length = 200, nullable = false, unique = true)
     private String email;
 
-    @Column(name = "Telefone_Cliente", length = 13, nullable = false, unique = true)
+    @Column(name = "Telefone_Cliente", columnDefinition = "CHAR(13)", nullable = false, unique = true)
     private String telefone;
 
     @ManyToOne

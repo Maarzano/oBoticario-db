@@ -17,16 +17,16 @@ public class Revendedores {
     @Column(name = "RevendedorID")
     private long id;
 
-    @Column(name = "Nome_Rev", nullable  = false)
+    @Column(name = "Nome_Rev",length = 100, nullable  = false)
     private String nome;
 
-    @Column(name = "Email_Rev",nullable  = false, unique = true)
+    @Column(name = "Email_Rev",length = 60, nullable  = false, unique = true)
     private String email;
 
-    @Column(name = "Senha_Rev", nullable = false)
+    @Column(name = "Senha_Rev",length = 200, nullable = false)
     private String senha;
 
-    @Column(name = "Telefone_Rev",length = 13, nullable = false, unique = true)
+    @Column(name = "Telefone_Rev",columnDefinition = "CHAR(13)", nullable = false, unique = true)
     private String telefone;
 
     @OneToOne

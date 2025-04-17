@@ -30,10 +30,10 @@ public class FuncDistribuidora {
     @Column(name = "Senha_Func", nullable = false)
     private String senha;
 
-    @Column(name = "Telefone_Func", nullable = false, unique = true)
+    @Column(name = "Telefone_Func", columnDefinition = "CHAR(13)", nullable = false, unique = true)
     private String telefone;
 
     @Column(name = "Data_Nascimento_Func", nullable = false)
-    @Past(message = "A data de nascimento tem que ser no passado")
+    @Past(message = "A data de nascimento deve ser no passado")
     private LocalDate dataNascimento;
 }

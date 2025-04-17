@@ -20,9 +20,9 @@ public class Distribuidora {
     @Column(name = "Nome_Distr", length = 100, nullable = false)
     private String nome;
 
-    @Column(name = "Telefone_Distr", length = 13, nullable = false)
+    @Column(name = "Telefone_Distr", columnDefinition = "CHAR(13)", nullable = false, unique = true)
     private String telefone;
 
-    @Column(name = "CNPJ_Distr", length = 14, nullable = false)
-    private Integer cnpj;
+    @Column(name = "CNPJ_Distr", columnDefinition = "CHAR(14)", nullable = false, unique = true)
+    private String cnpj;
 }
