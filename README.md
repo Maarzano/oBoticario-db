@@ -12,15 +12,7 @@
 -->
 
 <!--LOGO -->
-<style>
-  a{
-    color: white;
-  }
-  a:hover{
-    color: white;
-    opacity: 90%;
-  }
-</style>
+
 <br />
 <div align="center">
 <a href="https://github.com/github_username/repo_name">
