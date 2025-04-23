@@ -12,6 +12,7 @@
 -->
 
 <!--LOGO -->
+
 <br />
 <div align="center">
 <a href="https://github.com/github_username/repo_name">
@@ -32,25 +33,25 @@
   <summary>Sumario</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
     </li>
     <li>
-      <a href="#getting-started">Inicio</a>
+      <a href="#inicio">Inicio</a>
     </li>
     <li>
-      <a href="#getting-started">Uso</a>
+      <a href="#uso">Uso</a>
     </li>
     <li>
-      <a href="#getting-started">Historico de alterações</a>
+      <a href="#historico-de-alterações">Historico de alterações</a>
     </li>
     <li>
-      <a href="#getting-started">Integrantes</a>
+      <a href="#integrantes">Integrantes</a>
     </li>
     <li>
-      <a href="#getting-started">Licença</a>
+      <a href="#licença">Licença</a>
     </li>
     <li>
-      <a href="#getting-started">Contatos</a>
+      <a href="#contatos">Contatos</a>
     </li>
   </ol>
 </details>
@@ -58,6 +59,7 @@
 
 
 <!-- Sobre o projeto -->
+
 ## Sobre o projeto
 
 
@@ -156,9 +158,43 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- Historico de alterações -->
 ## Historico de alterações
 
-O arquivo contendo as alterações no banco de dados está localizado nesse link: [Documento das alterações realizadas](https://docs.google.com/document/d/1GrrrW64qXNJJj2tchUmBkU3zxB8GjEuI30qanbMdsig/edit?tab=t.0). 
+Desde o início foram separados o que cada um iria fazer em todas as etapas, com foco em não sobrecarregar ninguém, tendo principal objetivo perceber quem é melhor em cada área e realizar tarefas de acordo com suas facilidades!
 
-Ele registra todas as modificações realizadas na estrutura do banco, como mudanças em tabelas, relacionamentos e índices, para garantir o desempenho e a integridade dos dados.
+As primeiras ações realizadas foram:
+- Separar para todos olhar o banco de dados procurando por mudanças e aquelas que eles acharam, iriam ser decididas quais as que realmente deveriam mudar, serem excluídas ou adicionadas.
+
+- Todos terminando de verificar o banco de dados foram enviados para o Marzano(Líder) o que acharam de errado, juntando tudo foi separado pelo mesmo o que deveriam ser alterados, sendo encontrado também muitos erros diversos no banco de dados original, como tabela de endereços exageradas inutilmente (um dos erros mais significativos), falta de checks, validações, tipos de variáveis, após isso foram separados quem iria fazer tais mudanças.
+
+- Líder deu suporte a todos, enquanto eles faziam e ia dando feedbacks do que faltava, para que conseguíssemos avançar juntos, enquanto isso foi criado um repositório adicionando todos os integrantes e criado branchs para o desenvolvimento separada da main. Para que pudéssemos ter controle do que estava em produção e do que já estava funcionando, todos nós trabalhávamos no Dev e quando cada um terminava a sua parte era realizado um um push para dev remota, um Action criava um PR automático pra main, onde o Líder iria revisar e aceitar ou não o Push dos Desenvolvedores.
+
+- Após a mudança realizada no banco de dados foi iniciado o projeto e colocado no repositório já citado, com as regras e tudo mais, sendo orientado pelo Líder como deve ser feito todo o desenvolvimento.
+
+- Foi separado como seria feito o projeto e quais extensões/linguagens iríamos usar, tais quais como seria configurado as pastas e tudo mais. Após tudo isso foi separado qual classe cada um deveria fazer, sendo realizada pelo Líder algumas classes iniciais e mostrado de exemplo como deveria ser feito as seguintes classes:
+
+Endereços
+Funcionários
+Vendas
+Itens_venda
+
+- Foi separado a documentação no Swagger e tudo mais, configurado a conexão com o banco de dados e etc.
+
+- Com o mapeamento das tabelas todo pronto agora precisávamos ter certeza de que estava completo e tudo certo então foram repassados as seguintes coisas para cada um fazer para que o mapeamento estivesse idêntico ao da query do banco de dados:
+
+1. Testar todos os endpoints da API.
+2. Ter certeza de que o hibernate crie as tabelas exatamente da mesma forma que a query que fizemos, isso inclui: <br>
+ 2.1. Colocar os tipos certos, big int, varchar.<br>
+ 2.2. Colocar os checks certos em tudo que precisar.<br>
+ 2.3. Char com tamanhos certos. cpf(13).<br>
+ 2.4. etc.<br>
+3. Padronizar os nomes das variáveis.
+
+- Enquanto eles faziam essas modificações Marzano(Líder), Arthur Alves e Gabriel ficamos para testar pelo Swagger os endpoints, para podermos adicionar remover, editar e buscar por id ou todos, estávamos testando a api a procura de erros ou melhorias, achamos alguns e corrigimos os que achamos, como por exemplo um funcionário poder ter só uma falta foram corrigidos.
+
+- Depois que eles terminaram de fazer, foram separados novas tarefas para eles fazerem como melhorar a documentação do Swagger (descrição, títulos etc) quando todo mundo estava terminado tudo, todos se juntaram para testarmos tudo na API e corrigimos o que achamos de erros.
+
+- Após a conclusão de todas as alterações no banco de dados e sua validação funcional, Gabriel será responsável por realizar a documentação completa das modificações realizadas, bem como pela inclusão do arquivo README no repositório do GitHub.
+
+O arquivo contendo as alterações detalhadas do banco de dados está localizado nesse link: [Documento das alterações realizadas](https://docs.google.com/document/d/1GrrrW64qXNJJj2tchUmBkU3zxB8GjEuI30qanbMdsig/edit?tab=t.0).
 
 
 
@@ -213,7 +249,7 @@ Para mais informações, consulte o arquivo `LICENSE` incluído neste repositór
 
 Gabriel Arthur - [@gbriel.js](https://www.instagram.com/gbriel.js/) - gbl48287@gmail.com
 
-Arthur Araújo - [@marzan.0](https://www.instagram.com/marzan.0/)
+Arthur Araújo - [@marzan.0](https://www.instagram.com/marzan.0/) - arthuramarzano10@gmail.com
 
 Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/)
 
